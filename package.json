@@ -1,0 +1,15 @@
+{
+  "name": "mountain-climber",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "start": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "setup": "cp backend/.env.example backend/.env && echo 'Edit backend/.env with your MongoDB URI'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
