@@ -2,7 +2,7 @@ import React from 'react';
 
 // Max points = 24 hours * 5 stars * 10 = 1200 per day
 // We show progress along mountain path
-const MountainClimber = ({ points = 0, maxPoints = 1200, username = 'You', color = '#4ade80', size = 'large' }) => {
+const MountainClimber = ({ points = 0, maxPoints = 800, username = 'You', color = '#4ade80', size = 'large' }) => {
   const progress = Math.min(points / maxPoints, 1); // 0 to 1
   
   // Mountain path from bottom-right to top
