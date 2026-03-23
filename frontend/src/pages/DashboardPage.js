@@ -131,7 +131,7 @@ const DashboardPage = () => {
     }))
   ].sort((a, b) => b.points - a.points);
 
-  const maxClimberPoints = Math.max(...allClimbers.map(c => c.points), 1200);
+  const maxClimberPoints = Math.max(...allClimbers.map(c => c.points), 800);
 
   if (loading) return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '60vh' }}>

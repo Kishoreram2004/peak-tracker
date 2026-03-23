@@ -84,7 +84,7 @@ const TrackerPage = () => {
             { label: 'Hours Done', value: completedHours, unit: 'hrs', color: '#4ade80' },
             { label: 'Total Points', value: totalPoints, unit: 'pts', color: '#fbbf24' },
             { label: 'Avg Rating', value: avgRating, unit: '★', color: '#a78bfa' },
-            { label: 'Progress', value: `${Math.round((totalPoints / 1200) * 100)}`, unit: '%', color: '#60a5fa' },
+            { label: 'Progress', value: `${Math.round((totalPoints / 800) * 100)}`, unit: '%', color: '#60a5fa' },
           ].map(stat => (
             <div key={stat.label} style={{
               flex: '1', minWidth: '120px',
@@ -116,7 +116,7 @@ const TrackerPage = () => {
           </div>
           <MountainClimber
             points={totalPoints}
-            maxPoints={1200}
+            maxPoints={800}
             username={user?.username || 'You'}
             color="#4ade80"
             size="large"
@@ -127,12 +127,12 @@ const TrackerPage = () => {
           }}>
             <div style={{
               height: '100%', background: 'linear-gradient(90deg, #4ade80, #22c55e)',
-              width: `${Math.min((totalPoints / 1200) * 100, 100)}%`,
+              width: `${Math.min((totalPoints / 800) * 100, 100)}%`,
               transition: 'width 0.5s ease', borderRadius: '8px'
             }} />
           </div>
           <div style={{ fontSize: '12px', color: '#94a3b8', textAlign: 'center' }}>
-            {totalPoints} / 1200 pts to summit
+            {totalPoints} / 800 pts to summit
           </div>
         </div>
 
